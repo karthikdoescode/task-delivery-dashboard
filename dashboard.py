@@ -85,7 +85,7 @@ with tab2:
     lb.columns = ['Total', 'Delivered', 'WIP']
     lb['Delivery %'] = (lb['Delivered'] / lb['Total'] * 100).round(1)
     lb = lb.sort_values('Delivery %', ascending=False)
-    st.dataframe(lb.style.background_gradient(cmap='RdYlGn', subset=['Delivery %']), use_container_width=True)
+            st.dataframe(lb, use_container_width=True)
 
 with tab3:
     st.subheader("👥 Team Workload")
